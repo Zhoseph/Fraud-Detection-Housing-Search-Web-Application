@@ -1,0 +1,368 @@
+
+<%- include('partials/header') %>
+<head>
+ <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+</head>
+
+<title>Post Listing</title>
+<div class="" style="height: 8px; background-color: green"></div> 
+<div class="" style="height: 20px;"></div> 
+<div class="container">
+    
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>   
+
+    
+
+    <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+    <div class="row">     
+        <div class="col-md-8">
+            <label for="ltitle">listing title</label>            
+        </div>        
+        <div class="col-md-4">
+            <label for="sel1">area</label>            
+        </div>
+    </div>
+    <div class="row"> 
+        <div class="col-md-8">
+            <input type="text" class="form-control input-sm" style="width: 80%;" name="title" id="title" placeholder="title" required autofocus>
+        </div>        
+        <div class="col-md-4">            
+            <select class="form-control input-sm" id="region" style="width: 175px;" name="region">
+                <option value="San Jose">San Jose</option>
+                <option value="Mountain View">Mountain View</option>
+                <option value="Santa Clara">Santa Clara</option>
+                <option value="Sunnyvale">Sunnyvale</option>
+                <option value="Fremont">Fremont</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">    
+         <div class="col-md-8" style="margin-top: 8px;">
+            <div>
+                <label for="lbody">description</label>    
+            </div>            
+            <textarea class="text-area-100p form-control" rows="10" id="description" name="description" required></textarea>            
+        </div> 
+        <div class="col-md-4">            
+            <div style="margin-top: 8px;">
+            <label for="">Other</label>
+            </div>
+            <div class="checkbox">
+            <label><input type="checkbox" name="petOK" value="">Pets OK</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="wheelChairAccessiable" value="">Wheel Chair Accessiable</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="noSmoking" value="">No Smoking</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="isFurnished" value="">Furnished</label>
+            </div>
+            <!-- <div class="checkbox">
+              <label><input type="checkbox" value="">Laundry in Room</label>
+            </div> -->
+            <div> 
+                <div><label>zipcode</label></div>
+                <input type="text" class="form-control input-sm" style="width: 165px;" id="zipcode" name="zipcode" placeholder="95133" required>
+            </div>
+        </div>               
+    </div>
+    
+    <div class="row" style="margin-top: 10px;">    
+        <div class="col-md-2 "><!-- row1 col1  --> 
+            <div><label>square feet</label></div>
+            <input type="text" class="form-control input-sm" style="width: 165px;" id="area" name="area" placeholder="0" required>
+        </div>
+        <div class="col-md-2"><!-- row1 col1  --> 
+            <div><label>rent ($)</label></div>
+            <input type="text" class="form-control input-sm" style="width: 165px;" id="price" name="price" placeholder="">
+        </div>
+        <div class="col-md-5"><!-- row1 col1  --> 
+            <div><label>available on</label></div>
+            <input type="date" class="form-control input-sm" style="width: 165px;" name="availableOn" id="availableOn" placeholder="" required>
+        </div>
+    </div>
+
+    <div class="row margin-line1">    
+        <div class="col-md-2"><!-- row1 col1  --> 
+            <div><label>housing type</label></div>
+            <select class="form-control" name="type" id="type">
+                <option value="apartment">apartment</option>
+                <option value="condo">condo</option>
+                <option value="house">house</option>
+                <option value="town house">town house</option>
+            </select>
+        </div>
+        <div class="col-md-2"><!-- row1 col1  --> 
+            <div><label>laundry</label></div>
+            <select class="form-control" id="laundry" name="laundry">
+                <option value="laundry in unit">laundry in unit</option>
+                <option value="laundry in bldg">laundry in bldg</option>
+                <option value="laundry on site">laundry on site</option>
+                <option value="no laundry">no laundry</option>
+            </select>
+        </div>
+        <div class="col-md-2"><!-- row1 col1  --> 
+            <div><label>parking</label></div>
+            <select class="form-control" id="parking" name="parking">
+                <option value="attached garage">attached garage</option>
+                <option value="street parking">street parking</option>
+                <option value="no parking">no parking</option>
+            </select>
+        </div>
+        <div class="col-md-1"><!-- row1 col1  --> 
+            <div><label>bedrooms</label></div>
+            <select class="form-control" id="bedroom" name="bedroom">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+        <div class="col-md-1"><!-- row1 col1  --> 
+            <div><label>bathrooms</label></div>
+            <select class="form-control" id="bathroom" name="bathroom">
+                <option value="1">1</option>
+                <option value="1.5">1.5</option>
+                <option value="2">2</option>
+                <option value="2.5">2.5</option>
+                <option value="3">3</option>
+                <option value="3.5">3.5</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- contact row -->
+    <div class="row">
+    <div class="col-md-4">  
+        <div style="color: green;"><label><strong>contact email</strong></label></div>
+        <div><input type="email" class="form-control input-sm" style="width: 170px;" id="email" name="email" placeholder="" required></div>
+            
+        <div class="row">
+            <div class="col-md-6">
+                <div><label>phone number</label></div>
+                <input type="text" class="form-control input-sm" style="width: 170px;" id="phone" name="phone" placeholder="">
+            </div>
+            <div class="col-md-6">
+                <div><label>contact name</label></div>
+                <input type="text" class="form-control input-sm" style="width: 170px;" id="contactName" name="contactName" placeholder="">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-12">   
+            <div style="color: green;"><label><strong>address-street</strong></label></div>
+            <input type="text" class="form-control input-sm" style="width: 170px;" id="street" name="street" placeholder="" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6"><!-- row1 col1  --> 
+                <div><label>city</label></div>
+                <input type="text" class="width-30p form-control input-sm" style="width: 170px;" id="city" name="city" placeholder="" required>
+            </div>
+            <div class="col-md-6"><!-- row1 col1  --> 
+                <div><label>state</label></div>
+                <select class="form-control input-sm" id="state" name="state">
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California" selected="selected">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="District Of Columbia">District Of Columbia</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="South Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    </div><!-- contact row -->
+    
+    <hr>
+    <!-- row upload -->
+    <div class="row">    
+    <div class="col-md-8">
+        <!-- <div class="container"> -->
+        <div class="panel panel-default">
+        <div class="panel-heading"><strong>Upload Files</strong></div>
+        <div class="panel-body">
+
+          <!-- Standar Form -->
+   
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="file" name="files" multiple>
+              </div>
+              
+            </div>          
+
+          <!-- Drop Zone -->
+          <h4>Or drag and drop files below</h4>
+          <div class="upload-drop-zone" id="drop-zone">
+            Just drag and drop files here
+          </div>
+
+          <!-- Progress Bar -->
+          <!-- <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+              <span class="sr-only">60% Complete</span>
+            </div>
+          </div> -->
+
+          <!-- Upload Finished -->
+          <div class="js-upload-finished">
+            <h3>Processed files</h3>
+            <div class="list-group">
+<!--               <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-01.jpg</a>
+              <a href="#" class="list-group-item list-group-item-success"><span class="badge alert-success pull-right">Success</span>image-02.jpg</a> -->
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+    </div><!-- row upload -->
+         
+    
+	
+    <div class="row">
+    <div class="col-md-4 offset-md-6">
+      <button type="submit" class="btn btn-primary btn-lg" id="js-upload-submit">Post</button>
+      </div>
+    </div>
+    <!-- row upload -->
+</form>
+
+
+</div>
+<script type="text/javascript">
++ function($) {
+    'use strict';
+
+    // UPLOAD CLASS DEFINITION
+    // ======================
+
+    var dropZone = document.getElementById('drop-zone');
+    var uploadForm = document.getElementById('js-upload-form');
+
+    var startUpload = function(files) {
+        console.log(files)
+    }
+
+    uploadForm.addEventListener('submit', function(e) {
+        var uploadFiles = document.getElementById('js-upload-files').files;
+        e.preventDefault()
+
+        startUpload(uploadFiles)
+    })
+
+    dropZone.ondrop = function(e) {
+        e.preventDefault();
+        this.className = 'upload-drop-zone';
+
+        startUpload(e.dataTransfer.files)
+    }
+
+    dropZone.ondragover = function() {
+        this.className = 'upload-drop-zone drop';
+        return false;
+    }
+
+    dropZone.ondragleave = function() {
+        this.className = 'upload-drop-zone';
+        return false;
+    }
+
+    }(jQuery);
+</script>
+
+<script>
+        $(document).ready(function(){
+            $("#city").typeahead(
+            {
+                    source:function(query, process){
+                        var _url = "http://54.193.92.20/api/search/autocompletion?token=" + query;
+                        console.log(_url);
+                        return $.getJSON(_url, function(data){
+                            console.log(data.suggested_tokens.length);
+                            return process(data.suggested_tokens);
+                        });
+                    },
+                    
+                    menu: '<ul class="typeahead dropdown-menu" role="listbox" style="width: 169px"></ul>',
+                    item: '<li><a class="dropdown-item" href="#" role="option" style="width: 169px"></a></li>',
+                    items : 6,
+                    minLength: 3   
+            });
+            $("#zipcode").typeahead(
+            {
+                    source:function(query, process){
+                        var _url = "http://54.193.92.20/api/search/autocompletion?token=" + query;
+                        console.log(_url);
+                        return $.getJSON(_url, function(data){
+                            console.log(data.suggested_tokens.length);
+                            return process(data.suggested_tokens);
+                        });
+                    },
+                    
+                    menu: '<ul class="typeahead dropdown-menu" role="listbox" style="width: 166px"></ul>',
+                    item: '<li><a class="dropdown-item" href="#" role="option" style="width: 166px"></a></li>',
+                    items : 6,
+                    minLength: 3   
+            });
+        });
+</script>
+<%- include('partials/footer') %>

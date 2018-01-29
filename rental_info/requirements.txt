@@ -1,0 +1,15 @@
+Flask==0.11.1
+gensim==2.2.0
+commonregex==1.5.4
+pandas==0.19.2
+aenum==2.0.8
+requests==2.7.0
+pymongo==3.4.0
+numpy==1.12.0
+matplotlib==2.0.0
+nameparser==0.5.2
+nltk==3.2.2
+simplejson==3.11.1
+beautifulsoup4==4.6.0
+pyenchant==1.6.11
+scikit_learn==0.19b2

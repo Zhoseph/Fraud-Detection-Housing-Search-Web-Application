@@ -1,0 +1,11 @@
+Strict-Transport-Security: max-age=86400
+Content-Encoding: gzip
+Expires: Sun, 16 Jul 2017 05:49:42 GMT
+Vary: Accept-Encoding
+Server: Apache
+Last-Modified: Sun, 16 Jul 2017 05:44:42 GMT
+Cache-Control: max-age=300, public
+Date: Sun, 16 Jul 2017 05:44:42 GMT
+X-Mcp-Cache-Control: max-age=86400, public
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=UTF-8

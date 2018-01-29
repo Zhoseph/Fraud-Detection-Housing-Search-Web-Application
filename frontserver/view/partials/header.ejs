@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        
+        .width-30p {
+        	width: 30%;
+        }
+        .width-60p {
+        	width: 60%;
+        }
+        .width-80p {
+        	width: 80%;
+        }
+        .form-control-30p {
+        	width: 30%;
+        	display:inline;
+        }
+        .text-area-100p {
+        	width: 80%;
+        	overflow:auto;
+        }
+        .margin-line1 {
+        	margin-top: 10px;
+        	margin-down: auto;
+        }
+
+		.upload-drop-zone {
+  height: 200px;
+  border-width: 2px;
+  margin-bottom: 20px;
+}
+
+/* skin.css Style*/
+.upload-drop-zone {
+  color: #ccc;
+  border-style: dashed;
+  border-color: #ccc;
+  line-height: 200px;
+  text-align: center
+}
+.upload-drop-zone.drop {
+  color: #222;
+  border-color: #222;
+}
+        .form-container {
+            width: 400px;
+            margin: auto;
+        }
+
+        .credits {
+            border-top: 1px solid #ddd;
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Housing Search</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Search</a></li>
+      
+          </ul>
+          <ul class="nav navbar-nav navbar-right">   
+            <li><a href="#" title="phone:800-100-1111">Contact</a></li>
+            <% if(locals.userId) { %>
+                  <li class="active"><a href="/users/mylistings"><%= locals.userId%><span class="sr-only">(current)</span></a></li>      
+                  <li class=""><a href="/users/logout">Log Out<span class="sr-only">(current)</span></a></li>               
+            <% }else{%>
+                   <li class="active"><a href="/users/login">Sign In<span class="sr-only">(current)</span></a></li>
+            <% } %>  
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+<body>

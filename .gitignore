@@ -1,0 +1,17 @@
+*.log
+*.data
+*.pyc
+*~
+/scrapy/rental_listings/.scrapy
+/scrapy/rental_listings/.idea
+
+
+/housing/.project
+/housing/.settings
+/housing/*.class
+/housing/target
+/housing/.classpath
+
+/rental_info/.idea
+
+

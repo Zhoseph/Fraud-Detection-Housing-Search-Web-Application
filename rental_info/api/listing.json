@@ -1,0 +1,42 @@
+{
+	"__v": 0,
+	"_id": {
+		"$oid": "597087fc60ee7d4f47c4af43"
+	},
+	"address": {
+			"city": "San Jose",
+			"lon": -121.98136138916,
+			"zipcode": "95129",
+			"state": "California",
+			"street": "4490 Borina Drive",
+			"address": "4490 Borina Drive, San Jose, CA",
+			"lat": 37.310550689697
+	},
+	"area": 1000,
+	"availableOn": {
+		"$date": 1501027200000
+	},
+	"bathroom": 1,
+	"bedroom": 3,
+	"description": "beautiful home to rent great free",
+	"image": [
+		"http://thumbs.trulia-cdn.com/pictures/thumbs_5/ps.105/7/4/2/7/picture-uh=c5e5ad42caf5bd0f06550b278b0d2d19-ps=7427a7c8ff7377acaed86176db6cf384.jpg",
+        "http://maps.googleapis.com/maps/api/streetview?client=gme-truliainc&size=640x480&sensor=false&location=38.337421417236%2C-87.350624084473&signature=gvA3cm-jnpKAbgSvfi34Fe1MLKA="
+	],
+	"isFurnished": false,
+	"laundry": "laundry in unit",
+	"noSmoking": true,
+	"parking": "attached garage",
+	"petOK": false,
+	"price": 500,
+	"rating": -1,
+	"title": "new renting",
+	"type": "apartment",
+	"user": {
+		"contactName": "mike",
+		"email": "mike@gmail.com",
+		"id": 810,
+		"phone": "530-220-1833"
+	},
+	"wheelChairAccessiable": false
+}

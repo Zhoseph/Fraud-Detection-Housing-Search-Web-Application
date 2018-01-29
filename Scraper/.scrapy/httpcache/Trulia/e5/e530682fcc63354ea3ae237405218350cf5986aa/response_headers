@@ -1,0 +1,12 @@
+Via: 1.1 e8a1bacdefcba30a794b8f2b36714285.cloudfront.net (CloudFront)
+X-Cache: Miss from cloudfront
+Content-Encoding: gzip
+Accept-Ranges: bytes
+Strict-Transport-Security: max-age=604800;
+Vary: Host,Accept-Encoding
+Server: Apache/2.4.18 (Ubuntu)
+Last-Modified: Thu, 13 Jul 2017 00:06:33 GMT
+Etag: "49e-55427b48ab440-gzip"
+X-Amz-Cf-Id: Ai32i_REzt8UBjYgk0uuTK7ELlj6w-2xdZD5FpmkCR5LXRXP5BVU3w==
+Date: Mon, 17 Jul 2017 05:34:55 GMT
+Content-Type: text/plain

@@ -1,0 +1,11 @@
+Content-Encoding: gzip
+Set-Cookie: mv=%7b%22IsEnrolled%22%3atrue%2c%22CampaignId%22%3a10004%2c%22VariantId%22%3a1%7d; domain=.apartments.com; expires=Thu, 17-Aug-2017 05:33:16 GMT; path=/
+Set-Cookie: gip=%7b%22Display%22%3a%22Mountain+View%2c+CA%22%2c%22GeographyType%22%3a2%2c%22Address%22%3a%7b%22City%22%3a%22Mountain+View%22%2c%22State%22%3a%22CA%22%7d%2c%22Location%22%3a%7b%22Latitude%22%3a37.4056%2c%22Longitude%22%3a-122.078%7d%7d; domain=.apartments.com; expires=Mon, 17-Jul-2017 06:33:16 GMT; path=/
+Vary: Accept-Encoding
+Vary: User-Agent
+Server: Apache 2.x
+Pragma: no-cache
+Cache-Control: no-cache
+Date: Mon, 17 Jul 2017 05:33:15 GMT
+X-Frame-Options: SAMEORIGIN
+Content-Type: text/html; charset=utf-8

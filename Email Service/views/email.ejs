@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Fraud Report</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link href="/stylesheets/style_for_login.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+</head>
+
+<body>
+
+<div class="login">
+  <h2>Stock Recommendation System</h2>
+  <h1>User Login</h1>
+
+  <h4>HEADING 4</h4>
+  <form method="post" action="/user/login">
+    <input type="text" name="username" placeholder="Username" required="required" />
+    <input type="password" name="password" placeholder="Password" required="required" />
+    <p>Place Holder</p>
+    <button type="submit" class="btn btn-primary btn-block btn-large">Let me in</button>
+  </form>
+  <p></p>
+  <form action="/user/new_user" method="get">
+    <button type="submit"  class="btn btn-primary btn-block btn-large"  >New User</button>
+  </form>
+
+</div>
+
+</body>
+</html>

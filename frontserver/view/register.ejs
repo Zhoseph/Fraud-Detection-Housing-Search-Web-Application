@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+        <script>
+        var app = angular.module('myApp', []);
+        app.controller('validateCtrl', function($scope) {
+            $scope.pwdlength=false;
+            $scope.pwdrp=false;
+            $scope.varvalidation = true;
+            $scope.func1= function(){
+                if($scope.password1.length < 6){
+                    $scope.pwdlength = true;
+                }else{
+                    $scope.pwdlength = false;
+                }
+                if($scope.password1 == $scope.password2){
+                    $scope.pwdrp = false;
+                }
+                if(!($scope.pwdlength && $scope.pwdrp)){
+                    $scope.varvalidation = true;
+                }else{
+                    $scope.varvalidation = false;
+                }
+            }
+            $scope.func2= function(){
+                if($scope.password1.length < 6){
+                    $scope.pwdlength = true;
+                }else{
+                    $scope.pwdlength = false;
+                }
+                if($scope.password1 != $scope.password2){
+                    $scope.pwdrp = true;
+                }else{
+                    $scope.pwdrp = false;
+                } 
+                if($scope.pwdlength || $scope.pwdrp){
+                    $scope.varvalidation = true;
+                }else{
+                    $scope.varvalidation = false;
+                }
+            }
+            
+        });
+    </script>
+</head>
+<body>
+<%- include('partials/header') %>
+
+    
+<div class="form-container" ng-app="myApp" ng-controller="validateCtrl" name="myForm">
+    <h2>Register</h2>
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <form action="/users/register" method="post">
+    	<div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email"  class="form-control"  required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password1" type="password" name="password" id="password" ng-model="password1" ng-change="func1()" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="Length" ng-show="pwdlength" style="color:red">Length less then 6</label>
+        </div>
+        <div class="form-group">
+            <label for="password_r">Repeat Password</label>
+            <input id="password2" type="password" name="password_r" id="password_r" ng-model="password2" ng-change="func2()" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <label for="consistant" ng-show="pwdrp" style="color:red">The passwords are inconsistant. </label>
+        </div>
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" ng-model="firstname" required />
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" name="lastname" id="lastname" class="form-control" ng-model="lastname" required />
+        </div>        
+        <div class="form-group">
+            <input type="submit" ng-disabled="varvalidation || (email.$dirty && email.$invalid)" class="btn btn-primary" value="Register"/>
+            <a href="/users/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+
+</div>
+
+<%- include('partials/footer') %>
+</body>
+</html>

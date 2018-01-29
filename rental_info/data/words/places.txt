@@ -1,0 +1,851 @@
+alameda
+alpine
+amador
+butte
+calaveras
+colusa
+contra costa
+del norte
+el dorado
+fresno
+glenn
+humboldt
+imperial
+inyo
+kern
+kings
+lake
+lassen
+los angeles
+madera
+marin
+mariposa
+mendocino
+merced
+modoc
+mono
+monterey
+napa
+nevada
+orange
+placer
+plumas
+riverside
+sacramento
+san benito
+san bernardino
+san diego
+san francisco
+san joaquin
+san luis obispo
+san mateo
+santa barbara
+santa clara
+santa cruz
+shasta
+sierra
+siskiyou
+solano
+sonoma
+stanislaus
+sutter
+tehama
+trinity
+tulare
+tuloumne
+ventura
+yolo
+yuba
+acton
+adelanto
+agoura hills
+agua dulce
+alameda
+alamo
+albany
+alhambra
+aliso viejo
+alpine
+alta loma
+altadena
+alturas
+amador city
+anaheim
+anaheim hills
+anderson
+angels camp
+angelus oaks
+antelope
+antioch
+anza
+apple valley
+applegate
+aptos
+arcadia
+arcata
+arleta
+armona
+arnold
+aroura hills
+arroyo grande
+atascadero
+atwater
+atwood
+auberry
+auburn
+avalon
+avery
+avila beach
+azusa
+bakersfield
+baldwin park
+bangor
+banning
+barstow
+bay point
+bayside
+bel air
+bell
+bellflower
+belmont
+belmont shores
+belvedere
+ben lomond
+benicia
+berkeley
+berry creek
+beverly hills
+big bear city
+big bear lake
+big sur
+bishop
+blue jay
+blue lake
+blythe
+bolinas
+bonita
+borrego springs
+bothell
+boulder creek
+brea
+breenbrae
+brentwood
+brisbane
+buellton
+buena park
+burbank
+burlingame
+burlington
+calabasas
+california city
+calimesa
+calistoga
+camarillo
+cambria
+cameron park
+campbell
+campo
+canoga park
+canyon country
+canyon lake
+capistrano beach
+capitola
+cardiff
+cardiff-by-the-sea
+carlsbad
+carmel
+carmel valley
+carmichael
+carpinteria
+carson
+castaic
+castro valley
+catalina island
+cathedral city
+cayucos
+cedar glen
+cedar ridge
+ceres
+cerritos
+chatsworth
+cherry valley
+chester
+chico
+china lake
+chino
+chino hills
+chula vista
+citrus heights
+city of industry
+claremont
+clayton
+clearlake oaks
+clearlake
+cloverdale
+clovis
+coarsegold
+colfax
+coloma
+colton
+columbia
+colusa
+commerce
+compton
+concord
+cordelia
+corning
+corona
+corona del mar
+coronado
+corralitos
+corte madera
+costa mesa
+cotati
+coto de caza
+covina
+crescent city
+crestline
+crockett
+culver city
+cupertino
+cutten
+cypress
+daly city
+dana point
+danville
+davis
+del mar
+desert hot springs
+diamond bar
+diamond springs
+dobbins
+dominguez hills
+dove canyon
+downey
+duarte
+dublin
+durham
+east palo alto
+edwards
+edwards afb
+el cajon
+el camino village
+el centro
+el cerrito
+el dorado
+el dorado hills
+el granada
+elk
+el grove
+el macero
+el monte
+el segundo
+elk sobrante
+el toro
+emeryville
+encinitas
+encino
+escondido
+etiwanda
+etna
+eureka
+exeter
+fairfax
+fairfield
+fair oaks
+fallbrook
+felton
+ferndale
+fieldbrook
+fillmore
+flournoy
+folsom
+fontana
+foothill ranch
+foresthill
+forest ranch
+fort bragg
+fortuna
+foster city
+fountain valley
+frazier park
+freedom
+fremont
+fresno
+frogtown
+fullerton
+galt
+garberville
+gardena
+gardena grove
+gilroy
+glendale
+glendora
+glen ellen
+glenn
+gold river
+goleta
+granada hills
+grand terrace
+grass valley
+greenbrae
+groveland
+grover beach
+gualala
+guerneville
+hacienda heights
+half moon bay
+hanford
+harbor city
+hawthorne
+hayfork
+hayward
+healdsburg
+hemet
+hercules
+hermosa beach
+hesperia
+highland
+hinkley
+hollister
+hollywood
+homeland
+honcut
+humboldt
+huntington beach
+huntington park
+idyllwild
+imperial
+imperial beach
+independence
+indian wells
+indio
+inglewood
+inverness
+ione
+irvine
+irwindale
+isla vista
+isleton
+jackson
+jacumba
+jamestown
+jamul
+jenner
+joshua tree
+julian
+kelseyville
+kensington
+kentfield
+kenwood
+king city
+klamath
+klamath river
+la canada
+la canada flintridge
+la crescenta
+la habra
+la honda
+la jolla
+la mesa
+la mirada
+la palma
+la quinta
+la verne
+ladera ranch
+lafayette
+laguna beach
+laguna hills
+laguna niguel
+lake almanor
+lake arrowhead
+lake city
+lake elsinore
+lake forest
+lake isabella
+lakeport
+lakeside
+lake tahoe
+lakeview terrace
+lakewood
+lamont
+lancaster
+larkspur
+lathrop
+lawndale
+leggett valley
+lemon grove
+lemoore
+lewiston
+littlerock
+livermore
+llano
+lodi
+loleta
+lomita
+lompoc
+long beach
+loomis
+los alamitos
+los altos
+los altos hills
+los angeles
+los banos
+los gatos
+los osos
+lotus
+lower lake
+magalia
+malibu
+mammoth lakes
+manhattan beach
+manteca
+manton
+marina
+marina del rey
+mariposa
+martinez
+marysville
+mcclellan afb
+mckinleyville
+meadow vista
+mendocino
+menlo park
+merced
+middletown
+midway city
+millbrae
+mill valley
+milpitas
+mira loma
+mission hills
+mission viejo
+modesto
+moffett field
+mojave
+monarch beach
+mono hot springs
+monrovia
+montague
+montara
+montclair
+montebrllo
+montecito
+monterey
+monterey park
+monte sereno
+montrose
+moorpark
+moraga
+moreno valley
+morgan hill
+morro bay
+moss beach
+mount shasta
+mount wilson
+mountain ranch
+mountain view
+murrieta
+napa
+national city
+nevada city
+new almaden
+newark
+newbury park
+newhall
+newport
+newport beach
+nicasio
+nice
+nipomo
+norco
+north highlands
+north hollywood
+north manhattan beach
+northridge
+norwalk
+novato
+oakdale
+oakhurst
+oakland
+oakley
+oak park
+occidental
+oceanside
+ojai
+ontario
+orange
+orangevale
+oregon house
+orinda
+oroville
+oxnard
+pacheco
+pacifica
+pacific beach
+pacific grove
+pacific palisades
+pacoima
+padadena
+palermo
+palmdale
+palm desert
+palm springs
+palo alto
+palo cedro
+palos verdes
+paradise
+paramount
+pasadena
+paso robles
+patterson
+pebble beach
+penn valley
+perris
+petaluma
+pico rivera
+piedmont
+pinole
+pioneer
+pismo beach
+pittsburg
+placentia
+placerville
+playa del rey
+pleasant hill
+pleasanton
+plymouth
+point arena
+point richmond
+pomona
+port hueneme
+portola hills
+portola valley
+potter valley
+poway
+prather
+quartz hill
+quincy
+ramona
+rancho bernardo
+rancho cordova
+rancho cucamonga
+rancho dominguez
+rancho la costa
+rancho mirage
+rancho palos verdes
+rancho santa fe
+rancho santa margarita
+red bluff
+redding
+redlands
+redondo beach
+redway
+redwood city
+redwood shores
+rescue
+reseda
+rialto
+richmond
+ridgecrest
+ripon
+riverbank
+riverside
+rocklin
+rohnert park
+rolling hills estates
+rosamond
+rosemead
+roseville
+ross
+running springs
+sacramento
+salida
+salinas
+salton city
+san anselmo
+san bernardino
+san bruno
+san carlos
+san clemente
+san diego
+san dimas
+san fernando
+san francisco
+san gabriel
+san gregorio
+san jacinto
+san jose
+san juan bautista
+san juan capistrano
+san leandro
+san lorenzo
+san luis obispo
+san marcos
+san marino
+san martin
+san mateo
+san pablo
+san pedro
+san rafael
+san ramon
+san ysidro
+sanger
+santa ana
+santa barbara
+santa barbara-by-the-sea
+santa clara
+santa clarita
+santa cruz
+santa fe springs
+santa margarita
+santa maria
+santa monica
+santa paula
+santa rosa
+santa ynez
+santee
+saratoga
+saugus
+sausalito
+scotia
+scotts valley
+sea beach
+seal ranch
+seaside
+sebastopol
+shafter
+shelter cove
+sherman
+sherman oaks
+shingle springs
+sierra madre
+signal hill
+silverado
+silverstrand beach
+simi valley
+skyforest
+solana beach
+solano beach
+soledad
+solvang
+somerset
+sonoma
+sonora
+soquel
+south el monte
+south gate
+south lake tahoe
+south pasadena
+south san francisco
+south san gabriel
+spring valley
+springville
+st. helena
+stanford
+stanislaus
+stockton
+studio city
+suisun
+suisun city
+summerland
+sun city
+sunland
+sunnyvale
+sunol
+sunset beach
+sun valley
+surfside
+sylmar
+taft
+tahoe city
+tahoe vista
+tarzana
+tecopa
+tehachapi
+temecula
+temple city
+templeton
+thousand oaks
+three rivers
+tiburon
+tierrasanta
+toluca lake
+topanga
+torrance
+tracy
+trinidad
+truckee
+tujunga
+tulare
+turlock
+tustin
+twain harte
+twentynine palms
+ukiah
+union city
+universal city
+upland
+vacaville
+valencia
+vallejo
+valley center
+valley glen
+valley village
+van nuys
+venice
+venice beach
+ventura
+vernalis
+victor
+victorville
+villa park
+vineburg
+visalia
+vista
+walnut
+walnut creek
+warm springs
+watsonville
+weaverville
+weed
+west covina
+west hills
+west hollywood
+westlake
+westlake village
+west lancaster
+west los angeles
+west menlo park
+westminster
+west sacramento
+west tustin
+westwood
+westwood village
+whitmore
+whittier
+wildomar
+willits
+wilmington
+windsor
+winnetka
+woodland
+woodland hills
+woodside
+yorba linda
+yountville
+yreka
+yuba city
+yucaipa
+yucca valley
+94063
+94062
+94065
+94066
+94070
+94080
+94074
+94002
+94010
+94005
+94014
+94015
+94018
+94401
+94017
+94020
+94403
+94019
+94402
+94021
+94404
+94025
+94027
+94030
+94038
+94037
+94044
+94061
+94060
+94035
+94039
+94040
+94041
+94042
+94043
+94536
+94537
+94538
+94539
+94555
+94085
+94086
+94087
+94088
+94089
+94090
+95051
+95052
+95053
+95054
+95055
+95056
+95101
+95103
+95106
+95108
+95109
+95110
+95111
+95112
+95113
+95115
+95116
+95117
+95118
+95119
+95120
+95121
+95122
+95123
+95124
+95125
+95126
+95127
+95128
+95129
+95130
+95131
+95132
+95133
+95134
+95135
+95136
+95138
+95139
+95140
+95141
+95148
+95150
+95151
+95152
+95153
+95154
+95155
+95156
+95157
+95158
+95159
+95160
+95161
+95164
+95170
+95172
+95173
+95190
+95191
+95192
+95193
+95194
+95196
+

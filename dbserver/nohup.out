@@ -1,0 +1,1001 @@
+{ name: 'chen', age: '11', sex: 'male' }
+chen
+[0mPOST /test [32m200 [0m35.816 ms - 4[0m
+Error: Can't set headers after they are sent.
+    at ServerResponse.OutgoingMessage.setHeader (_http_outgoing.js:344:11)
+    at ServerResponse.header (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/response.js:730:10)
+    at ServerResponse.send (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/response.js:170:12)
+    at done (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/response.js:967:10)
+    at tryHandleCache (/home/ec2-user/workspace/project-295-gener/node_modules/ejs/lib/ejs.js:208:10)
+    at View.exports.renderFile [as engine] (/home/ec2-user/workspace/project-295-gener/node_modules/ejs/lib/ejs.js:412:10)
+    at View.render (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/view.js:128:8)
+    at tryRender (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/application.js:640:10)
+    at EventEmitter.render (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/home/ec2-user/workspace/project-295-gener/node_modules/express/lib/response.js:971:7)
+[0mPOST /test [33m400 [0m3.195 ms - 895[0m
+
+> project-295-gener@0.0.0 start /home/ec2-user/workspace/project-295-gener
+> node ./bin/www
+
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m83.513 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:123
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.2455919lng:-121.802501
+bedroom3
+[0mPOST /listings/gsearch?key=123 [32m200 [0m23.170 ms - 1556[0m
+get /detail/show/:id, listingId:597a9c17b0ec2b0def9154b7
+search key:597a9c17b0ec2b0def9154b7
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.2455919, lon:-121.802501, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[9]: lat:37.3685433lng:-121.8635706
+bedroom3
+[0mGET /detail/show/597a9c17b0ec2b0def9154b7 [32m200 [0m59.594 ms - 12312[0m
+get /fraudreport/:id, listingId:597a9c17b0ec2b0def9154b7
+search key:597a9c17b0ec2b0def9154b7
+api 1 respond: 200
+{"listing_id": "597a9c17b0ec2b0def9154b7", "negative_words": [], "duplicated_listings": [{"duplicates": [], "type": "image"}, {"duplicates": [], "type": "address"}], "positive_words": ["enjoy", "amenity", "finest", "stainless", "enhance", "excited"], "score": 1.514, "avg_price": {"price": 2278.05, "latest_date": "2017-03-31"}}
+[0mGET /fraudreport/597a9c17b0ec2b0def9154b7 [32m200 [0m1053.889 ms - 328[0m
+get /detail/show/:id, listingId:597a9c17b0ec2b0def9154b7
+search key:597a9c17b0ec2b0def9154b7
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.2455919, lon:-121.802501, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[9]: lat:37.3685433lng:-121.8635706
+bedroom3
+[0mGET /detail/show/597a9c17b0ec2b0def9154b7 [32m200 [0m26.820 ms - 12312[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='120705de7e61c5b322ad798b8ef225a7'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='120705de7e61c5b322ad798b8ef225a7'
+
+Connection closed..
+DB Results:
+user or password incorrect
+[0mPOST /users/login [32m200 [0m5.816 ms - 26[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m4.473 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:12
+POST /listings/gsearch , number record found:5
+index[0]: lat:37.2455919lng:-121.802501
+bedroom3
+index[1]: lat:37.3134931lng:-121.9491627
+bedroom2
+index[2]: lat:37.3199256lng:-121.9465111
+bedroom2
+index[3]: lat:37.367999lng:-121.91449
+bedroom1
+index[4]: lat:37.2788435lng:-121.8744255
+bedroom1
+[0mPOST /listings/gsearch?key=12 [32m200 [0m12.926 ms - 7422[0m
+get /detail/show/:id, listingId:597a9c17b0ec2b0def9154b7
+search key:597a9c17b0ec2b0def9154b7
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.2455919, lon:-121.802501, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[9]: lat:37.3685433lng:-121.8635706
+bedroom3
+[0mGET /detail/show/597a9c17b0ec2b0def9154b7 [32m200 [0m20.006 ms - 12312[0m
+get /fraudreport/:id, listingId:597a9c17b0ec2b0def9154b7
+search key:597a9c17b0ec2b0def9154b7
+api 1 respond: 200
+{"listing_id": "597a9c17b0ec2b0def9154b7", "negative_words": [], "duplicated_listings": [{"duplicates": [], "type": "image"}, {"duplicates": [], "type": "address"}], "positive_words": ["enjoy", "amenity", "finest", "stainless", "enhance", "excited"], "score": 1.514, "avg_price": {"price": 2278.05, "latest_date": "2017-03-31"}}
+[0mGET /fraudreport/597a9c17b0ec2b0def9154b7 [32m200 [0m1274.744 ms - 328[0m
+[0mGET / [32m200 [0m4.837 ms - 207[0m
+[0mGET /favicon.ico [33m404 [0m2.544 ms - 1816[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='e0be29ce74b012054d6f121b30011c4b'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='e0be29ce74b012054d6f121b30011c4b'
+
+Connection closed..
+DB Results:
+user or password incorrect
+[0mPOST /users/login [32m200 [0m4.348 ms - 26[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m2.677 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m5.839 ms - 2177[0m
+get /detail/show/:id, listingId:597665a4cc522540db5a5392
+search key:597665a4cc522540db5a5392
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.40278970000001lng:-121.9309795
+bedroom4
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[9]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mGET /detail/show/597665a4cc522540db5a5392 [32m200 [0m23.022 ms - 12161[0m
+get /fraudreport/:id, listingId:597665a4cc522540db5a5392
+search key:597665a4cc522540db5a5392
+api 1 respond: 200
+{"listing_id": "597665a4cc522540db5a5392", "negative_words": [], "duplicated_listings": [{"duplicates": [], "type": "image"}, {"duplicates": [], "type": "address"}], "positive_words": [], "score": 1.399, "avg_price": {"price": 1933.2, "latest_date": "2017-03-31"}}
+[0mGET /fraudreport/597665a4cc522540db5a5392 [32m200 [0m728.485 ms - 264[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m6.770 ms - 2177[0m
+get /detail/show/:id, listingId:597d949318785942dd89cfc3
+search key:597d949318785942dd89cfc3
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.40278970000001lng:-121.9309795
+bedroom4
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[9]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mGET /detail/show/597d949318785942dd89cfc3 [32m200 [0m19.136 ms - 12182[0m
+get /fraudreport/:id, listingId:597d949318785942dd89cfc3
+search key:597d949318785942dd89cfc3
+api 1 respond: 200
+{"listing_id": "597d949318785942dd89cfc3", "negative_words": [], "duplicated_listings": [{"duplicates": [], "type": "image"}, {"duplicates": [], "type": "address"}], "positive_words": [], "score": 2.457, "avg_price": {"price": 6444.0, "latest_date": "2017-03-31"}}
+[0mGET /fraudreport/597d949318785942dd89cfc3 [32m200 [0m561.049 ms - 264[0m
+get /fraudreport/:id, listingId:597d949318785942dd89cfc3
+search key:597d949318785942dd89cfc3
+api 1 respond: 200
+{"listing_id": "597d949318785942dd89cfc3", "negative_words": [], "duplicated_listings": [{"duplicates": [], "type": "image"}, {"duplicates": [], "type": "address"}], "positive_words": [], "score": 2.457, "avg_price": {"price": 6444.0, "latest_date": "2017-03-31"}}
+[0mGET /fraudreport/597d949318785942dd89cfc3 [32m200 [0m558.685 ms - 264[0m
+POST /login: 
+Query is:select * from user where email='user02@gmai.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmai.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:
+user or password incorrect
+[0mPOST /users/login [32m200 [0m4.539 ms - 26[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m3.363 ms - 11[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m2.829 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m7.381 ms - 2177[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m3.607 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m6.263 ms - 2177[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m6.740 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m6.254 ms - 2177[0m
+POST /login: 
+Query is:select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user02@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m5.920 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:2
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom3
+index[1]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mPOST /listings/gsearch?key=21 [32m200 [0m6.184 ms - 2177[0m
+get /detail/show/:id, listingId:597665a4cc522540db5a5392
+search key:597665a4cc522540db5a5392
+number record found by curobj._id:-1,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:3
+number record found by recommendation:10
+index[0]: lat:37.40278970000001lng:-121.9309795
+bedroom4
+index[1]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[2]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[3]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[4]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[5]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[6]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[7]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[8]: lat:37.3680263lng:-121.8634263
+bedroom3
+index[9]: lat:37.3684606lng:-121.8634885
+bedroom3
+[0mGET /detail/show/597665a4cc522540db5a5392 [32m200 [0m17.964 ms - 12161[0m
+
+> project-295-gener@0.0.0 start /home/ec2-user/workspace/project-295-gener
+> node ./bin/www
+
+`open()` is deprecated in mongoose >= 4.11.0, use `openUri()` instead, or set the `useMongoClient` option if using `connect()` or `createConnection()`. See http://mongoosejs.com/docs/connections.html#use-mongo-client
+multipart/form-data; boundary=----WebKitFormBoundaryXiYk1b3Y5oywP4RB
+name:title;filed:new listing 006
+name:region;filed:San Jose
+name:description;filed:new listing 006
+name:isFurnished;filed:
+name:zipcode;filed:95133
+name:area;filed:900
+name:price;filed:3200
+name:availableOn;filed:2017-07-31
+name:type;filed:apartment
+name:laundry;filed:laundry in unit
+name:parking;filed:attached garage
+name:bedroom;filed:1
+name:bathroom;filed:1
+name:email;filed:mike@gmail.com
+name:phone;filed:5302221111
+name:contactName;filed:nick
+name:street;filed:1831 pine hollow cir
+name:city;filed:san jose
+name:state;filed:CA
+name:files;file:[object Object],[object Object],[object Object],[object Object]
+>> obj: { title: [ 'new listing 006' ],
+  region: [ 'San Jose' ],
+  description: [ 'new listing 006' ],
+  isFurnished: [ '' ],
+  zipcode: [ '95133' ],
+  area: [ '900' ],
+  price: [ '3200' ],
+  availableOn: [ '2017-07-31' ],
+  type: [ 'apartment' ],
+  laundry: [ 'laundry in unit' ],
+  parking: [ 'attached garage' ],
+  bedroom: [ '1' ],
+  bathroom: [ '1' ],
+  email: [ 'mike@gmail.com' ],
+  phone: [ '5302221111' ],
+  contactName: [ 'nick' ],
+  street: [ '1831 pine hollow cir' ],
+  city: [ 'san jose' ],
+  state: [ 'CA' ],
+  files: 
+   [ { fieldName: 'files',
+       originalFilename: '00F0F_1CQSRtVSIZ9_600x450.jpg',
+       path: '/tmp/V1GqHbiUqTh41n5n9lDltT3A.jpg',
+       headers: [Object],
+       size: 39236 },
+     { fieldName: 'files',
+       originalFilename: '00g0g_gTlPDjNDYqM_600x450.jpg',
+       path: '/tmp/k5XfBZp60uAm81hE01Z6gwMf.jpg',
+       headers: [Object],
+       size: 47885 },
+     { fieldName: 'files',
+       originalFilename: '00k0k_l18xvtZWKD0_600x450.jpg',
+       path: '/tmp/6Im0bke4eSePsTWhpIYT9xFh.jpg',
+       headers: [Object],
+       size: 40702 },
+     { fieldName: 'files',
+       originalFilename: '01111_7LvLLu6Se77_600x450.jpg',
+       path: '/tmp/qkCYhmNnIbjjIjbiQ8hOcOIH.jpg',
+       headers: [Object],
+       size: 42197 } ] }
+numImage:4
+imageurl:https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg
+imageurl:https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257100800F0F_1CQSRtVSIZ9_600x450.jpg
+imageurl:https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257100800F0F_1CQSRtVSIZ9_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101401111_7LvLLu6Se77_600x450.jpg
+imageurl:https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257100800F0F_1CQSRtVSIZ9_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101401111_7LvLLu6Se77_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101300k0k_l18xvtZWKD0_600x450.jpg
+https://maps.googleapis.com/maps/api/geocode/json?address=1831%20pine%20hollow%20cir,San%20Jose,CA&key=AIzaSyCzEyDueuvT5dF-F6JZu30Y8MAmjw4JPOY
+response-map: 200
+--xx{
+   "results" : [
+      {
+         "address_components" : [
+            {
+               "long_name" : "1831",
+               "short_name" : "1831",
+               "types" : [ "street_number" ]
+            },
+            {
+               "long_name" : "Pine Hollow Circle",
+               "short_name" : "Pine Hollow Cir",
+               "types" : [ "route" ]
+            },
+            {
+               "long_name" : "Alum Rock",
+               "short_name" : "Alum Rock",
+               "types" : [ "neighborhood", "political" ]
+            },
+            {
+               "long_name" : "San Jose",
+               "short_name" : "San Jose",
+               "types" : [ "locality", "political" ]
+            },
+            {
+               "long_name" : "Santa Clara County",
+               "short_name" : "Santa Clara County",
+               "types" : [ "administrative_area_level_2", "political" ]
+            },
+            {
+               "long_name" : "California",
+               "short_name" : "CA",
+               "types" : [ "administrative_area_level_1", "political" ]
+            },
+            {
+               "long_name" : "United States",
+               "short_name" : "US",
+               "types" : [ "country", "political" ]
+            },
+            {
+               "long_name" : "95133",
+               "short_name" : "95133",
+               "types" : [ "postal_code" ]
+            },
+            {
+               "long_name" : "1728",
+               "short_name" : "1728",
+               "types" : [ "postal_code_suffix" ]
+            }
+         ],
+         "formatted_address" : "1831 Pine Hollow Cir, San Jose, CA 95133, USA",
+         "geometry" : {
+            "bounds" : {
+               "northeast" : {
+                  "lat" : 37.3686816,
+                  "lng" : -121.8638806
+               },
+               "southwest" : {
+                  "lat" : 37.3684944,
+                  "lng" : -121.8640941
+               }
+            },
+            "location" : {
+               "lat" : 37.368588,
+               "lng" : -121.8639873
+            },
+            "location_type" : "ROOFTOP",
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 37.36993698029149,
+                  "lng" : -121.8626383697085
+               },
+               "southwest" : {
+                  "lat" : 37.36723901970849,
+                  "lng" : -121.8653363302915
+               }
+            }
+         },
+         "place_id" : "ChIJHWFEWFbMj4ARTB3go88lRvk",
+         "types" : [ "premise" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+latitude:37.368588
+longitude:-121.8639873
+i:3
+curUserId:undefined
+outside print imageurl:https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257100800F0F_1CQSRtVSIZ9_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101401111_7LvLLu6Se77_600x450.jpg,https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101300k0k_l18xvtZWKD0_600x450.jpg
+{ __v: 0,
+  title: 'new listing 006',
+  type: 'apartment',
+  description: 'new listing 006',
+  availableOn: Mon Jul 31 2017 00:00:00 GMT+0000 (UTC),
+  price: 3200,
+  area: 900,
+  bedroom: 1,
+  bathroom: 1,
+  laundry: 'laundry in unit',
+  parking: 'attached garage',
+  petOK: false,
+  isFurnished: true,
+  noSmoking: false,
+  rating: -1,
+  wheelChairAccessiable: false,
+  _id: 597f919cce8dbd1cee7dc2b4,
+  user: 
+   { id: 'undefined',
+     email: 'mike@gmail.com',
+     contactName: 'nick',
+     phone: '5302221111' },
+  address: 
+   { region: 'San Jose',
+     street: '1831 pine hollow cir',
+     city: 'san jose',
+     state: 'CA',
+     lat: 37.368588,
+     lon: -121.8639873,
+     zipcode: '95133' },
+  image: 
+   [ 'https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101100g0g_gTlPDjNDYqM_600x450.jpg',
+     'https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257100800F0F_1CQSRtVSIZ9_600x450.jpg',
+     'https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101401111_7LvLLu6Se77_600x450.jpg',
+     'https://s3-us-west-2.amazonaws.com/cmpe295housing/150153257101300k0k_l18xvtZWKD0_600x450.jpg' ] }
+listingId:597f919cce8dbd1cee7dc2b4
+type of small:object
+posted listing curobj._id:597f919cce8dbd1cee7dc2b4
+threshold:0.1, lat:37.368588, lon:-121.8639873, bedroom:1
+Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in your own promise library instead: http://mongoosejs.com/docs/promises.html
+saveAfter: number record found by recommendation:5
+GET http://54.193.92.20/api/fraud/listing/597f919cce8dbd1cee7dc2b4
+[0mPOST /testposting2/undefined [32m200 [0m1276.509 ms - 7762[0m
+api 1 respond: 200
+{"status": "updating"}
+Get /recommend , listingId:597f919cce8dbd1cee7dc2b4
+threshold:0.1, lat:37.368588, lon:-121.8639873, bedroom:1
+Get /recommend , number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /recommend?id=597f919cce8dbd1cee7dc2b4&lat=37.368588&lon=-121.8639873&bedroom=1 [32m200 [0m15.956 ms - 6762[0m
+get /fraudreport/:id, listingId:597f919cce8dbd1cee7dc2b4
+search key:597f919cce8dbd1cee7dc2b4
+No user found
+[0mGET /fraudreport/597f919cce8dbd1cee7dc2b4 [32m200 [0m5.814 ms - 31[0m
+get /fraudreport/:id, listingId:597f919cce8dbd1cee7dc2b4
+search key:597f919cce8dbd1cee7dc2b4
+No user found
+[0mGET /fraudreport/597f919cce8dbd1cee7dc2b4 [32m200 [0m3.220 ms - 31[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mPOST /listings/gsearch?key=21 [32m200 [0m11.715 ms - 1111[0m
+get /detail/show/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f6d9aca9ba119639f3282 [32m200 [0m15.679 ms - 7887[0m
+get /fraudreport/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+report found:{ _id: 597f6db9ca9ba119639f3283,
+  listingID: '597f6d9aca9ba119639f3282',
+  score: 1.448,
+  __v: 0,
+  avgPrice: { price: 5370, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: [],
+  negativeWords: [] }
+[0mGET /fraudreport/597f6d9aca9ba119639f3282 [32m200 [0m5.171 ms - 303[0m
+get /fraudreport/:id, listingId:
+received JSON:
+{ description_score: 0.448,
+  duplicated_listings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  listing_id: '597f919cce8dbd1cee7dc2b4',
+  score: 0.648,
+  positive_words: [],
+  avg_price: { price: 1933.2, latest_date: '2017-03-31' },
+  price_score: 0,
+  image_score: 0.2,
+  address_score: 0,
+  negative_words: [] }
+received listing_id:
+597f919cce8dbd1cee7dc2b4
+received POST /writereport
+updated rating: 0.648
+id score:0.648
+j.dup[]:[object Object],[object Object]
+report received and created
+saved listingId in report collection:597f919cce8dbd1cee7dc2b4
+[0mPOST /writereport [32m200 [0m28.437 ms - 19[0m
+get /detail/show/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f6d9aca9ba119639f3282 [32m200 [0m15.133 ms - 7890[0m
+POST /listings/gsearch , listingId:undefined
+search key:21
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mPOST /listings/gsearch?key=21 [32m200 [0m4.295 ms - 1111[0m
+get /detail/show/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f6d9aca9ba119639f3282 [32m200 [0m18.726 ms - 7890[0m
+get /fraudreport/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+report found:{ _id: 597f6db9ca9ba119639f3283,
+  listingID: '597f6d9aca9ba119639f3282',
+  score: 1.448,
+  __v: 0,
+  avgPrice: { price: 5370, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: [],
+  negativeWords: [] }
+[0mGET /fraudreport/597f6d9aca9ba119639f3282 [32m200 [0m5.302 ms - 303[0m
+get /detail/show/:id, listingId:597f6d9aca9ba119639f3282
+search key:597f6d9aca9ba119639f3282
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3684606, lon:-121.8634885, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f6d9aca9ba119639f3282 [32m200 [0m15.507 ms - 7890[0m
+POST /login: 
+Query is:select * from user where email='user03@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user03@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m70.407 ms - 11[0m
+POST /login: 
+Query is:select * from user where email='user03@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+SQL Query::select * from user where email='user03@gmail.com' and password='202cb962ac59075b964b07152d234b70'
+
+Connection closed..
+DB Results:[object Object]
+valid Login
+[0mPOST /users/login [32m200 [0m9.320 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:12
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mPOST /listings/gsearch?key=12 [32m200 [0m4.761 ms - 2471[0m
+get /detail/show/:id, listingId:597f8581b6e77e1b95eab982
+search key:597f8581b6e77e1b95eab982
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3682934, lon:-121.8630062, bedroom:3
+number record found by recommendation:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f8581b6e77e1b95eab982 [32m200 [0m13.254 ms - 10865[0m
+get /detail/show/:id, listingId:597f86f6b6e77e1b95eab984
+search key:597f86f6b6e77e1b95eab984
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.5328498, lon:-121.9265481, bedroom:3
+number record found by recommendation:3
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mGET /detail/show/597f86f6b6e77e1b95eab984 [32m200 [0m8.499 ms - 6827[0m
+get /fraudreport/:id, listingId:597f86f6b6e77e1b95eab984
+search key:597f86f6b6e77e1b95eab984
+report found:{ _id: 597f8716b6e77e1b95eab985,
+  listingID: '597f86f6b6e77e1b95eab984',
+  score: 0.69,
+  __v: 0,
+  avgPrice: { price: 3368.58, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: [ 'beautiful', 'good', 'top', 'award', 'winning', 'master' ],
+  negativeWords: [ 'alarm' ] }
+[0mGET /fraudreport/597f86f6b6e77e1b95eab984 [32m200 [0m5.069 ms - 363[0m
+get /detail/show/:id, listingId:597f8581b6e77e1b95eab982
+search key:597f8581b6e77e1b95eab982
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3682934, lon:-121.8630062, bedroom:3
+number record found by recommendation:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f8581b6e77e1b95eab982 [32m200 [0m14.243 ms - 10865[0m
+get /fraudreport/:id, listingId:597f8581b6e77e1b95eab982
+search key:597f8581b6e77e1b95eab982
+report found:{ _id: 597f85a1b6e77e1b95eab983,
+  listingID: '597f8581b6e77e1b95eab982',
+  score: 1.16,
+  __v: 0,
+  avgPrice: { price: 4296, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: 
+   [ 'perfect',
+     'available',
+     'verifiable',
+     'top',
+     'bright',
+     'master',
+     'spacious' ],
+  negativeWords: [ 'burning', 'vanity' ] }
+[0mGET /fraudreport/597f8581b6e77e1b95eab982 [32m200 [0m3.616 ms - 389[0m
+get /detail/show/:id, listingId:597f8581b6e77e1b95eab982
+search key:597f8581b6e77e1b95eab982
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3682934, lon:-121.8630062, bedroom:3
+number record found by recommendation:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f8581b6e77e1b95eab982 [32m200 [0m23.451 ms - 10865[0m
+1111111111111111
+[0mPOST /users/register [32m200 [0m11.400 ms - 10[0m
+POST /listings/gsearch , listingId:undefined
+search key:12
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mPOST /listings/gsearch?key=12 [32m200 [0m21.799 ms - 2471[0m
+get /detail/show/:id, listingId:597f8581b6e77e1b95eab982
+search key:597f8581b6e77e1b95eab982
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3682934, lon:-121.8630062, bedroom:3
+number record found by recommendation:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f8581b6e77e1b95eab982 [32m200 [0m9.928 ms - 10865[0m
+get /detail/show/:id, listingId:597f86f6b6e77e1b95eab984
+search key:597f86f6b6e77e1b95eab984
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.5328498, lon:-121.9265481, bedroom:3
+number record found by recommendation:3
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mGET /detail/show/597f86f6b6e77e1b95eab984 [32m200 [0m8.452 ms - 6827[0m
+get /fraudreport/:id, listingId:597f86f6b6e77e1b95eab984
+search key:597f86f6b6e77e1b95eab984
+report found:{ _id: 597f8716b6e77e1b95eab985,
+  listingID: '597f86f6b6e77e1b95eab984',
+  score: 0.69,
+  __v: 0,
+  avgPrice: { price: 3368.58, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: [ 'beautiful', 'good', 'top', 'award', 'winning', 'master' ],
+  negativeWords: [ 'alarm' ] }
+[0mGET /fraudreport/597f86f6b6e77e1b95eab984 [32m200 [0m3.330 ms - 363[0m
+get /detail/show/:id, listingId:597f86f6b6e77e1b95eab984
+search key:597f86f6b6e77e1b95eab984
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.5328498, lon:-121.9265481, bedroom:3
+number record found by recommendation:3
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mGET /detail/show/597f86f6b6e77e1b95eab984 [32m200 [0m9.120 ms - 6827[0m
+POST /listings/gsearch , listingId:undefined
+search key:11
+POST /listings/gsearch , number record found:0
+[0mPOST /listings/gsearch?key=11 [32m200 [0m1.980 ms - 11[0m
+POST /listings/gsearch , listingId:undefined
+search key:
+POST /listings/gsearch , number record found:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mPOST /listings/gsearch?key= [32m200 [0m8.103 ms - 8375[0m
+get /detail/show/:id, listingId:597f8ca3b6e77e1b95eab986
+search key:597f8ca3b6e77e1b95eab986
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.3697064, lon:-121.8644143, bedroom:3
+number record found by recommendation:6
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.5328498lng:-121.9265481
+bedroom3
+index[2]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[3]: lat:37.368588lng:-121.8639873
+bedroom1
+index[4]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[5]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f8ca3b6e77e1b95eab986 [32m200 [0m11.620 ms - 9501[0m
+get /detail/show/:id, listingId:597f919cce8dbd1cee7dc2b4
+search key:597f919cce8dbd1cee7dc2b4
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.368588, lon:-121.8639873, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f919cce8dbd1cee7dc2b4 [32m200 [0m8.956 ms - 7782[0m
+get /fraudreport/:id, listingId:597f919cce8dbd1cee7dc2b4
+search key:597f919cce8dbd1cee7dc2b4
+report found:{ _id: 597f91bace8dbd1cee7dc2b5,
+  listingID: '597f919cce8dbd1cee7dc2b4',
+  score: 0.648,
+  __v: 0,
+  avgPrice: { price: 1933.2, latestDate: '2017-03-31' },
+  duplicatedListings: 
+   [ { duplicates: [], type: 'image' },
+     { duplicates: [], type: 'address' } ],
+  positiveWords: [],
+  negativeWords: [] }
+[0mGET /fraudreport/597f919cce8dbd1cee7dc2b4 [32m200 [0m4.319 ms - 305[0m
+get /detail/show/:id, listingId:597f919cce8dbd1cee7dc2b4
+search key:597f919cce8dbd1cee7dc2b4
+number record found by curobj._id:597f919cce8dbd1cee7dc2b4,1
+threshold:0.1, lat:37.368588, lon:-121.8639873, bedroom:1
+number record found by recommendation:5
+index[0]: lat:37.3697064lng:-121.8644143
+bedroom3
+index[1]: lat:37.3682934lng:-121.8630062
+bedroom3
+index[2]: lat:37.368588lng:-121.8639873
+bedroom1
+index[3]: lat:37.3697536lng:-121.8640662
+bedroom1
+index[4]: lat:37.3684606lng:-121.8634885
+bedroom1
+[0mGET /detail/show/597f919cce8dbd1cee7dc2b4 [32m200 [0m9.278 ms - 7782[0m
+POST /listings/gsearch , listingId:undefined
+search key:12
+POST /listings/gsearch , number record found:1
+index[0]: lat:37.3682934lng:-121.8630062
+bedroom3
+[0mPOST /listings/gsearch?key=12 [32m200 [0m6.874 ms - 2471[0m

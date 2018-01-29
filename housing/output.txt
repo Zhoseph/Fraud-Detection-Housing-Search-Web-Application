@@ -1,0 +1,110 @@
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator tokenize
+[main] INFO edu.stanford.nlp.pipeline.TokenizerAnnotator - No tokenizer type provided. Defaulting to PTBTokenizer.
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ssplit
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator pos
+[main] INFO edu.stanford.nlp.tagger.maxent.MaxentTagger - Loading POS tagger from edu/stanford/nlp/models/pos-tagger/english-left3words/english-left3words-distsim.tagger ... done [1.2 sec].
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator lemma
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator ner
+[main] INFO edu.stanford.nlp.ie.AbstractSequenceClassifier - Loading classifier from edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz ... done [1.9 sec].
+[main] INFO edu.stanford.nlp.ie.AbstractSequenceClassifier - Loading classifier from edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz ... done [2.0 sec].
+[main] INFO edu.stanford.nlp.ie.AbstractSequenceClassifier - Loading classifier from edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz ... done [0.8 sec].
+[main] INFO edu.stanford.nlp.time.JollyDayHolidays - Initializing JollyDayHoliday for SUTime from classpath edu/stanford/nlp/models/sutime/jollyday/Holidays_sutime.xml as sutime.binder.1.
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator parse
+[main] INFO edu.stanford.nlp.parser.common.ParserGrammar - Loading parser from serialized file edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz ... done [0.4 sec].
+[main] INFO edu.stanford.nlp.pipeline.StanfordCoreNLP - Adding annotator dcoref
+word: Life pos: NNP ne:O
+word: moves pos: VBZ ne:O
+word: at pos: IN ne:O
+word: a pos: DT ne:O
+word: decadently pos: RB ne:O
+word: tranquil pos: JJ ne:O
+word: pace pos: NN ne:O
+word: at pos: IN ne:O
+word: the pos: DT ne:O
+word: Chesapeake pos: NNP ne:LOCATION
+word: Point pos: NNP ne:LOCATION
+word: Apartments pos: NNP ne:LOCATION
+word: in pos: IN ne:O
+word: San pos: NNP ne:LOCATION
+word: Mateo pos: NNP ne:LOCATION
+word: . pos: . ne:O
+parse tree:
+(ROOT (S (NP (NNP Life)) (VP (VBZ moves) (PP (IN at) (NP (NP (DT a) (ADJP (RB decadently) (JJ tranquil)) (NN pace)) (PP (IN at) (NP (DT the) (NNP Chesapeake) (NNP Point) (NNP Apartments))))) (PP (IN in) (NP (NNP San) (NNP Mateo)))) (. .)))
+dependency graph:
+-> moves/VBZ (root)
+  -> Life/NNP (nsubj)
+  -> pace/NN (nmod:at)
+    -> at/IN (case)
+    -> a/DT (det)
+    -> tranquil/JJ (amod)
+      -> decadently/RB (advmod)
+    -> Apartments/NNP (nmod:at)
+      -> at/IN (case)
+      -> the/DT (det)
+      -> Chesapeake/NNP (compound)
+      -> Point/NNP (compound)
+  -> Mateo/NNP (nmod:in)
+    -> in/IN (case)
+    -> San/NNP (compound)
+  -> ./. (punct)
+
+word: Call pos: VB ne:O
+word: John pos: NNP ne:PERSON
+word: to pos: TO ne:O
+word: see pos: VB ne:O
+word: this pos: DT ne:O
+word: beautifully pos: RB ne:O
+word: remodeled pos: VBN ne:O
+word: 3 pos: CD ne:NUMBER
+word: Bedroom pos: NN ne:O
+word: , pos: , ne:O
+word: 1.5 pos: CD ne:NUMBER
+word: Bath pos: NN ne:O
+word: townhouse pos: NN ne:O
+word: in pos: IN ne:O
+word: Foster pos: NNP ne:LOCATION
+word: City pos: NNP ne:LOCATION
+word: . pos: . ne:O
+parse tree:
+(ROOT (S (VP (VB Call) (S (NP (NNP John)) (VP (TO to) (VP (VB see) (NP (NP (DT this)) (VP (ADVP (RB beautifully)) (VBN remodeled) (NP (NP (CD 3) (NN Bedroom)) (, ,) (NP (NP (CD 1.5) (NN Bath) (NN townhouse)) (PP (IN in) (NP (NNP Foster) (NNP City))))))))))) (. .)))
+dependency graph:
+-> Call/VB (root)
+  -> John/NNP (dobj)
+  -> see/VB (xcomp)
+    -> to/TO (mark)
+    -> this/DT (dobj)
+      -> remodeled/VBN (acl)
+        -> beautifully/RB (advmod)
+        -> Bedroom/NN (dobj)
+          -> 3/CD (nummod)
+          -> ,/, (punct)
+          -> townhouse/NN (appos)
+            -> 1.5/CD (nummod)
+            -> Bath/NN (compound)
+            -> City/NNP (nmod:in)
+              -> in/IN (case)
+              -> Foster/NNP (compound)
+  -> ./. (punct)
+
+word: Light pos: NNP ne:O
+word: & pos: CC ne:O
+word: Bright pos: NNP ne:O
+word: End pos: NNP ne:O
+word: Unit pos: NNP ne:O
+word: - pos: : ne:O
+word: Must pos: MD ne:O
+word: See pos: VB ne:O
+word: ! pos: . ne:O
+parse tree:
+(ROOT (NP (NP (NNP Light) (CC &) (NNP Bright) (NNP End) (NNP Unit)) (: -) (SQ (MD Must) (VP (VB See)) (. !))))
+dependency graph:
+-> Unit/NNP (root)
+  -> Light/NNP (compound)
+    -> &/CC (cc)
+    -> Bright/NNP (conj:&)
+  -> Bright/NNP (compound)
+  -> End/NNP (compound)
+  -> -/: (punct)
+  -> See/VB (parataxis)
+    -> Must/MD (aux)
+    -> !/. (punct)

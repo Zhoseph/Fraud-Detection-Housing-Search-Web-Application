@@ -1,0 +1,7 @@
+﻿{
+    "connectionString": "localhost:27017/mean-stack-registration-login-example",
+    "apiUrl":  "https://localhost:3000/api",
+    "awsApiUrl": "http://34.209.255.214:3100",
+    "googleMapKey": "AIzaSyCzEyDueuvT5dF-F6JZu30Y8MAmjw4JPOY",
+    "secret": "devdacticIsAwesome"
+}

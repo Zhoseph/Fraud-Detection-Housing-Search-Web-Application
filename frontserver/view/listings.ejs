@@ -1,0 +1,195 @@
+<%- include('partials/header') %>
+<div class="" style="height: 8px; background-color: green"></div> 
+<div class="" style="height: 8px;"></div> 
+<div class="container" style="">
+
+    <div class="">   <!-- head row -->
+        <div class="" style="height: 55px; ">   <!-- head row.row1 -->
+            <div class="" style="width: 27%; height: 55px; float: left;">
+                <img src="img/logo-safe-text.jpg" style="height: 70px; width: auto;"><!-- <h3> LOGO.COM PICS </h3> -->
+            </div>
+            <div class="" style="width: 36%; height: 55px; float: left;">
+                <label color="" style="display:inline-block; margin-right:10px; font-family: verdana; font-size:12px; color: #414141"> Listings in </label> 
+                <select class="" style="height: 18px; display:inline-block; margin-right:10px;" name="region">
+                    <option value="CA">CA</option>
+                </select>
+                <label color="" style="display:inline-block; margin-right:10px; font-family: verdana; font-size:12px; color: #414141"> have a number of 225 </label>
+            </div>
+            <div class="" style="width: 37%; height: 55px; float: left;  display: flex; justify-content: center; align-items: bottom; ">
+                <label color="" style="display:inline-block; margin-right:11px; font-family: arial; font-size:12px; color: #414141"> Search Home </label>
+                <label color="" style="display:inline-block; margin-right:11px; font-family: arial; font-size:12px; color: #414141"> Customer Care   </label> 
+                <label color="" style="display:inline-block; font-family: verdana; font-size:11px; color: #414141; margin-right: 10px;"> Call or Text 800.800.1234</label>
+                 
+            </div>
+        </div>   
+        <div class="" style="height: 50px;">   <!-- head row.row2 -->
+            <div class="" style="position: relative; width: 27%; height: 50px; float: left;">
+                <a href="/" color="" style="display:inline-block; position: absolute; bottom: 0; left: 0px; font-family: verdana; font-size:20px; color: #414141"><strong>HOME</strong></a>
+                <div style="height:20px;  position: absolute; bottom: 3px; left: 70px; border-left: grey solid; border-width: 1px; display:inline-block;"> </div> 
+                <a href="#" color="" style="display:inline-block; position: absolute; bottom: 0; left: 75px; font-family: verdana; font-size:20px; color: #414141"><strong>SEARCH</strong></a>    
+                <div style="height:20px; position: absolute; bottom: 3px; left: 169px; border-left: grey solid; border-width: 1px; display:inline-block;"> </div>
+                <a href="#" color="" style="display:inline-block; position: absolute; bottom: 0; left: 175px; font-family: verdana; font-size:20px; color: #414141"><strong>FRAUD</strong></a>   
+            </div>
+            <div class="" style="position: relative; width: 36%; height: 50px; float: left;">
+                <div class="" align="right" style="position: absolute; bottom: 0px; left: 5px; width: 70%; ">
+                    <label color="" style="text-align: right; font-family: arial; font-size:9px; "> Advanced Listing Search</label>
+                    <form action="/listings/gsearch" method="post">
+                    <div class="input-group input-group-md" style="width: 100%;"">
+                      <input type="text" class="form-control input-md" name="generalsearch" placeholder="Address, City, Zip, Title, ...">
+                      <span class="input-group-btn">
+                        <button class="btn btn-md btn-warning" type="submit"> <span class="glyphicon glyphicon-search"></span> </button>
+                      </span>
+                    </div><!-- /input-group -->
+                    </form>
+                </div>
+            </div>
+            <div class="" style="position: relative; width: 36%; height: 50px; float: left;">
+            <a href="/users/mylistings" color="" style="display:inline-block; position: absolute; bottom: 0; right: 290px; font-family: arial; font-size:16px; color: #414141"><strong>Account</strong></a>
+                <div style="height:18px;  position: absolute; bottom: 3px; right: 278px; border-left: grey solid; border-width: 1px; display:inline-block;"> </div> 
+                 <a href="/users/mylistings" color="" style="display:inline-block; position: absolute; bottom: 0; right: 180px; font-family: arial; font-size:16px; color: #414141"><strong>My Listings</strong></a>
+                <div style="height:18px; position: absolute; bottom: 3px; right: 175px; border-left: grey solid; border-width: 1px; display:inline-block;"> </div>
+                <a href="/users/register" color="" style="display:inline-block; position: absolute; bottom: 0; right: 100px; font-family: arial; font-size:16px; color: #009933"><strong>New User</strong></a>    
+                <div style="height:18px; position: absolute; bottom: 3px; right: 95px; border-left: grey solid; border-width: 1px; display:inline-block;"> </div>
+                <a href="/post" color="" style="display:inline-block; position: absolute; bottom: 0; right: 0px; font-family: arial; font-size:16px; color: #414141"><strong>Post Listing</strong></a>
+            </div>
+        </div><!-- head row.row2 end -->
+    </div>
+
+    <div class="" style="height: 35px; margin-top:15px; display: flex; justify-content: center; align-items: center; background-color: #e8e8e8">
+        <label href="#" color="" style="display:inline-block; font-family: verdana; font-size:16px; color: #414141"><strong style="color: #b71f38">Welcome</strong> to <strong style="color: #b71f38"> Safe Housing</strong> Search Website</label>
+    </div> 
+
+    <div class=""><!-- main body -->
+        <div style="width: 22%; float: left;">
+            <div style="position: relative; height:25px; margin-top: 10px">
+            <label color="" style="position: absolute; left:10px; font-family: verdana; font-size:14px; color: #414141"><strong>Narrow Search By</strong></label>
+            </div>
+            <div style="width: 100%; border-top: black solid; border-width: 2px;"> </div>
+            <div style="margin-top: 5px; margin-left: 10px;">
+                <label color="" style="font-family: arial; font-size:18px; color: #414141"><strong>TYPE</strong></label>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">House</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">Apartment</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">Garage</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">Shared Room</label></div>                
+            </div>
+            <div style="border-top: grey solid; border-width: 1px; margin-top: 20px;"> </div>
+            <div style="margin-top: 5px; margin-left: 10px;">
+                <label color="" style="font-family: arial; font-size:18px; color: #414141"><strong>BEDROOM</strong></label>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">1</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">2</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">3</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">4</label></div>                
+            </div>
+            <div style="border-top: grey solid; border-width: 1px; margin-top: 20px;"> </div>
+            <div style="margin-top: 5px; margin-left: 10px;">
+                <label color="" style="font-family: arial; font-size:18px; color: #414141"><strong>CITY</strong></label>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">SAN JOSE</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">MOUNTAIN VIEW</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">SANTA CLARA</label></div>
+                <div class="checkbox" style=""><label><input type="checkbox" value="">FREMONT</label></div>                
+            </div>
+            <div style="border-top: grey solid; border-width: 1px;"> </div>
+        </div>
+        <div style="width: 78%; float: left;"> <!-- body: search result -->
+            <div class="container" style="position:relative; width: 100%; margin-bottom:15px; margin-top: 15px;">
+                <div><label color="" style="font-family: Arial Narrow; font-size:28px; color: green">Advanced Listing Search</label></div>
+                <!-- Gill Sans -->
+                <div><label color="" style="font-family: arial; font-size:11px;">Reset Search</label></div>
+                <div>
+                    <label color="" style="display:inline-block; font-family: arial; font-size:12px;"><%= JSON.parse(docs).docs.length %> Results</label>
+                    <div style="position: absolute; bottom:0px; right:0px; display:inline-block; ">
+                    <label color="" style="display:inline-block; font-family: arial; font-size:12px; ">Sorted By: </label> 
+                    <select class="" style="height: 18px; display:inline-block; margin-right:10px;" name="sortby">
+                        <option value="pricesort">Price: Low to High</option>
+                        <option value="bedroomsort">Bedroom: Low to High</option>
+                    </select>
+                    </div>
+                </div>
+            </div>
+            <!-- body: search result: items -->
+            <div style="border-top: grey solid; border-width: 1px;"> </div>
+            <% 
+                var doc = JSON.parse(docs).docs; 
+
+                for(var i in doc) 
+                {
+                    var date= new Date(doc[i].availableOn);
+                    var statusImg, ratingImg, titleStatus;
+                    var score=doc[i].rating;
+                    var isDuplicateImg = false;
+                    var isDuplicateAdd = false;
+
+                    if(doc[i].duplicatedImgExisted != undefined){
+                        isDuplicateImg = doc[i].duplicatedImgExisted
+                    }
+                    if(doc[i].duplicatedAddExisted != undefined){
+                        isDuplicateAdd = doc[i].duplicatedAddExisted
+                    }
+                    var score=doc[i].rating;
+                    var detailUrl = '/detail/show/' + doc[i]._id;
+                    if(score == -1){
+                        statusImg = 'status-ongoing.png';
+                        ratingImg = 'rating-empty.png';
+                        titleStatus = 'FraudRatingBeingProcessed';
+                    }else{
+                        if(isDuplicateImg || isDuplicateAdd){
+                            statusImg = 'status-caution.png'
+                            titleStatus = 'Be-Cautious';
+                        }else{
+                            statusImg = 'status-safe.png'
+                            titleStatus = 'Safe-Home';
+                        }
+                        if(score<1.0){    
+                            ratingImg = 'rating-5.png';                            
+                        }else if(score<2.0){
+                            ratingImg = 'rating-4.png';
+                        }else if(score<3.0){
+                            ratingImg = 'rating-3.png';
+                        }else if(score<4.0){
+                            ratingImg = 'rating-2.png';
+                        }else{
+                            ratingImg = 'rating-1.png';                           
+                        }
+                    }                    
+            %>
+            <div class="" style="margin-top: 10px; height: 175px"><!-- body: search result: items -->
+                <div class="" style="width: 17%; height: 175px; float: left;  display: flex; justify-content: center; align-items: center;"> 
+                    <div><img src=<%= doc[i].image[0] %> style="height: 133px; width: 133px; border:2px solid green"></div>
+                </div>
+                <div class="" style="width: 58%; height: 175px; float: left;"> 
+                    <div style="margin-left: 15px;"><label style="font-family: Arial Narrow; font-size: 20px; color: #595959"><%= doc[i].type.charAt(0).toUpperCase() + doc[i].type.slice(1)%>- <%= doc[i].title%></label></div>
+                    <div style="margin-left: 15px;"><label style="font-family: Arial Narrow; font-size: 15px; color: #595959"><%= doc[i].address.street%>, <%= doc[i].address.city%>, <%= doc[i].address.state%> </div>
+                    <div style="margin-left: 15px;"><img src=<%= 'img/' + statusImg %> title=<%= titleStatus %> style="height: 50px; width: auto;"></div>
+                    <div style="margin-left: 15px; margin-top: 5px"><img src=<%= 'img/' + ratingImg %> title="fraud rating: green is safe" style="height: 36px; width: auto;"></div>
+                </div>
+                <div align="right" class="" style="width: 25%; height: 175px; float: left; ">                    
+                    <div><label color="" style="font-family: verdana; font-size:18px; margin-top: 7px;">$<%= doc[i].price%></div>
+                    <form action=<%= detailUrl %> method="get"><div style="margin-top: 7px;"><button type="submit" class="btn btn-success" style="font-family: arial Narrow; font-size: 20px; width: 200px; height: 40px"><strong>Details</strong></button></div></form>
+                    <div><label color="" style="font-family: arial; font-size:13px; margin-top: 4px;"><%= doc[i].bedroom%> bedrooms <%= doc[i].bathroom%> bathrooms</label></div>
+                    <div><label color="" style="font-family: arial; font-size:12px; margin-top: 4px;">Available on <strong><%=  date.getMonth() + '/' +date.getDate() + '/' +  date.getFullYear() %></strong></label></div>
+                </div>
+            </div>
+            <div style="border-top: #e6e6e6 solid; border-width: 1px; margin-top: 12px"> </div><!-- body: search result: items end-->
+
+            <% 
+                }
+            %><!-- END -body: search result: items -->
+
+        </div><!-- body: search result end -->
+    </div> <!-- main body end -->
+
+    
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>
+    
+
+</div> <!--container end -->
+
+
+
+
+<%- include('partials/footer') %>

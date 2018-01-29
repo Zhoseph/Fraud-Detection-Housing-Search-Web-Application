@@ -1,0 +1,98 @@
+﻿<h1>My Account</h1>
+<div ng-controller="Order.IndexController" class="form-container">
+    <form name="orderForm">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Order Number</th>
+                <th>Order Date</th>
+                <th>Order Status</th>
+                <th>Confirm Delivery</th>
+                <th>Comment Order</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="order in vm.orders">
+                <!--<td>{{order.ordernum}}</td>-->
+                <!--<td>{{order.orderdate}}</td>-->
+                <!--<td>{{order.status}}</td>-->
+                <td id = "order_id">{{order.order_id}}</td>
+                <td id = "order_time">{{order.order_time}}</td>
+                <td id = "confirm_time">{{order.confirm_time}}</td>
+                <td>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" ng-disabled="order.confirm_time != null" ng-click="vm.confirmOrder(order.order_id)">Confirm</button>
+                    </div>
+
+                </td>
+                <td>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" ng-disabled="order.confirm_time == null" ng-click="vm.showModal(order)">Comment</button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+
+    <modal id="modalForm" title="Login form" ng-show="vm.modalFlag">
+        <!--<form role="form">-->
+            <!--<div class="form-group">-->
+                <!--<label for="email">Email address</label>-->
+                <!--<input type="email" class="form-control" id="email" placeholder="Enter email" />-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+                <!--<label for="password">Password</label>-->
+                <!--<input type="password" class="form-control" id="password" placeholder="Password" />-->
+            <!--</div>-->
+            <!--<button class="btn btn-primary" ng-click="vm.saveUser()">Save Comments</button>-->
+            <!--<button class="btn btn-danger" ng-click="vm.hideModal()">Cancel</button>-->
+
+        <!--</form>-->
+
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <!--<div class="panel-heading">Comment</div>-->
+
+            <div class="panel-body" >
+                <table class="table">
+                    <!--<table class="table table-hover">-->
+                    <thead>
+                    <tr>
+                        <th>Dish ID</th>
+                        <!--<th>Dish Name</th>-->
+                        <th>Dish Image</th>
+                        <th>Comment</th>
+                        <th>Submit</th>
+                        <th>&nbsp;</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="dish in vm.commentOrderData.dishes[0]">
+                        <td id = "dish_id">{{dish._id}}</td>
+                        <td><img src="image/01-MapoTofu.jpg" alt="Mapo Tofu" style="width:200px;height:150px;"></td>
+                        <td>
+                            <input type = "text" id = "comment" placeholder="Share your comment" style="width:200px;height:150px;">
+                            </input>
+                        </td>
+                        <td>
+                            <div class="btn-group">
+                                <button class="btn btn-primary" ng-click="vm.submitComment(order.order_id, dish_id)">Comment</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <button class="btn btn-danger" ng-click="vm.hideModal()">Cancel</button>
+
+    </modal>
+
+</div>
+
+
+

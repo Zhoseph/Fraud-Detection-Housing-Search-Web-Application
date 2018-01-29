@@ -1,0 +1,155 @@
+
+<%- include('partials/header') %>
+<title>Search Listing</title>
+<div class="" style="height: 8px; background-color: green"></div> 
+<div class="" style="height: 22px;"></div> 
+<div class="container">
+    
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <% if(locals.success) { %>
+        <div class="alert alert-success"><%= success %></div>
+    <% } %>   
+    <form method="post">
+    <div class="row">    
+        <div class="col-md-4"><!-- row1 col1  -->
+            
+
+            <!-- <input type="text" class="input-sm" id="searchcontent" placeholder="search content"> -->
+            <!-- <button type="submit" class="btn btn-primary">Search</button> -->
+
+            <div class="width-80p input-group">
+            <input type="text" class="form-control" name="searchinput" id="searchinput">
+            <span class="input-group-btn">
+                <button type="submit" class="btn btn-primary" type="button">Search</button>
+            </span>
+            </div>      
+                        
+                        
+            <div class="checkbox">
+            <label><input type="checkbox" name="chSearchTitle" value="true">Search Titles</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" name="chSearchContent" value="">Search Contents</label>
+            </div>
+    
+            <label for="">Price</label> 
+            <div>    
+            <input type="text" class="width-30p" name="minprice" id="minprice" placeholder="minprice">
+            <label for="">-</label> 
+            <input type="text" class="width-30p" id="maxprice" placeholder="maxprice">
+            </div>   
+        </div>
+        <div class="col-md-4"><!-- row1 col2  -->            
+            <label for="sel1">Availbility within</label>
+            <select class="width-60p form-control" id="sel1">
+                <option value="one">10 miles</option>
+                <option value="one">20 miles</option>
+                <option value="one">30 miles</option>
+                <option value="one">40 miles</option>
+            </select>
+            
+            <div class="margin-line1">
+            <label for="">Bedrooms</label>
+            </div>
+            <div class="margin-line1"> 
+                                          
+                <select class="form-control form-control-30p" name="minBedRoom" id="sel1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                
+                <label for="">&nbsp-&nbsp</label>
+                
+                <select class="form-control form-control-30p" name="maxBedRoom" id="sel1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                
+            </div>
+            
+        </div><!-- row1 col2  -->
+        <!-- row1 col3  -->
+        <div class="col-md-4">
+            <label for="">Bath Room</label>
+            <div class="checkbox">
+            <label><input type="checkbox" value="">Individual</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Shared</label>
+            </div>
+        
+            <label for="">Area</label> 
+            <div>    
+            <input type="text" class="width-30p" id="minarea" placeholder="min area">
+            <label for="">-</label> 
+            <input type="text" class="width-30p" id="maxarea" placeholder="max area">
+            </div>
+        </div>
+    </div> <!-- row1 -->
+    <hr>    
+    <div class="row">     <!--row2-->
+        <div class="col-md-4"><!-- row2 col1  -->
+            <label for="">Type</label>
+            <div class="checkbox">
+            <label><input type="checkbox" value="">House</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Apartment</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Garage</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Room Shared</label>
+            </div>  
+               
+        </div>
+        <div class="col-md-4"><!-- row2 col2  -->
+            <label for="">Region</label>
+            <div class="checkbox">
+            <label><input type="checkbox" value="">San Jose</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Mountain View</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Santa Clara</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Sunnyvale</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Fremont</label>
+            </div>           
+        </div>
+        <!-- row2 col3  -->
+        <div class="col-md-4">
+            <label for="">Other</label>
+            <div class="checkbox">
+            <label><input type="checkbox" value="">Cats OK</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Dogs OK</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">No Smoking</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Furnished</label>
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="">Laundry in Room</label>
+            </div>           
+        </div>
+    </div> <!-- row2 -->  
+    </form> 
+
+</div>
+
+<%- include('partials/footer') %>

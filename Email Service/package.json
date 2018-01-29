@@ -1,0 +1,56 @@
+{
+  "_args": [
+    [
+      {
+        "raw": ".",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": ".",
+        "spec": "C:\\Users\\ZHANG JOHN\\WebstormProjects\\Server",
+        "type": "directory"
+      },
+      "C:\\Users\\ZHANG JOHN\\WebstormProjects\\Server"
+    ]
+  ],
+  "_from": "..\\..\\..\\Users\\ZHANG JOHN\\WebstormProjects\\Server",
+  "_id": "server@0.0.0",
+  "_inCache": true,
+  "_location": "/server",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": ".",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": ".",
+    "spec": "C:\\Users\\ZHANG JOHN\\WebstormProjects\\Server",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:..\\..\\..\\Users\\ZHANG JOHN\\WebstormProjects\\Server",
+  "_shasum": "92e70109b3b8dc1a2bc3527fec9bb62053f39a9b",
+  "_shrinkwrap": null,
+  "_spec": ".",
+  "_where": "C:\\Users\\ZHANG JOHN\\WebstormProjects\\Server",
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "nodemailer":"4.0.1",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {},
+  "name": "server",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "version": "0.0.0"
+}

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <title>Housing Search</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="css/freelancer.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+ 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <style>  
+    .col-center-block {  
+        float: none;  
+        display: block;  
+        margin-left: auto;  
+        margin-right: auto;  
+    }  
+    </style> 
+
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Safe Home</a>
+            </div>
+			
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>                    
+        			<!-- <div class="alert alert-success"></div> -->    			    
+                    <% if(!locals.userId) { %>
+                    <li class="page-scroll">
+                        <a href="/register">Join</a>
+                    </li>
+                    <% } %>
+                    <% if(locals.userId) { %>
+                         <li class="page-scroll">
+                        <a href="/users/mylistings"><%= locals.userId%></a>
+                        </li>
+                        <li class="page-scroll">
+                        <a href="/users/logout">Log Out</a>
+                        </li>
+                    <% }else{%>
+                        <li class="page-scroll">
+                        <a href="/users/login">Sign in</a>
+                        </li>
+                    <% } %>                    
+                    <li class="page-scroll">
+                        <a href="#" title="Phone:(530)220-1228">Contact</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="http://54.175.222.115:8888/request_report">URL</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/post">Post</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+
+        <div class="container" id="maincontent" tabindex="1">
+            <h1 class="">Find a Home</h1>
+            <label for="ex1"></label>
+
+            <!--main search Form-->
+            <form action="/listings/gsearch" method="post">
+            <div class="row">            
+              <div class="col-lg-5 col-center-block">
+                <div class="input-group input-group-lg">
+                  <input type="text" class="form-control input-lg" id="autocompletion" name="generalsearch" placeholder="Address, City, Zip, Title ...">
+                  <span class="input-group-btn">
+                    <button class="btn btn-info btn-lg" type="submit"> <span class="glyphicon glyphicon-search"></span> </button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-5 -->
+            </div><!-- /.row -->       
+
+            </form>
+
+            <P></P>
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/house1.jpg" alt="">
+                    <div class="intro-text">
+                        <h1 class="name">Housing Search</h1>
+                        <hr class="star-light">
+                        <span class="skills">House Renting -  Fraud Rating  -  Renter Protection</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>LISTINGS</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/detail/show/59827fa936764b3b56ae2bce" class="portfolio-link">
+                        <div class="caption">
+                            <div class="caption-content">
+   
+                            </div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/cmpe295housing/2300duplicate.jpg" style="height:380px;" class="img-responsive" alt="Cabin">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/detail/show/59865db5ccc8c32a45de69d9" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/cmpe295housing/150197803642500s0s_i0JuOiqJYo7_600x450.jpg" style="height:380px" class="img-responsive" alt="Slice of cake">
+                    </a>
+                </div>
+                <div class="col-sm-4 portfolio-item">
+                    <a href="/detail/show/5982392736764b3b56ae2bca" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                            </div>
+                        </div>
+                        <img src="https://s3-us-west-2.amazonaws.com/cmpe295housing/1501706534885401-maplewood-ave-san-jose-ca-building-photo-8.jpg" class="img-responsive" style="height:380px" alt="Circus tent">
+                    </a>
+                </div>  
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Location</h3>
+                        <p>1 Washinton Square
+                            <br>San Jose, CA 95133</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Around the Web</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>About This Website</h3>
+                        <p>It is a house renting website created by <a href="/">Housing Search</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Housing Search 2017
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+   <!-- auto completion -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+    <script>
+        var colorsss = ["red", "blue", "green", "yellow", "brown", "black"];
+        $(document).ready(function(){
+            $("#autocompletion").typeahead(
+            {
+                    source:function(query, process){
+                        var _url = "http://54.193.92.20/api/search/autocompletion?token=" + query;
+                        console.log(_url);
+                        return $.getJSON(_url, function(data){
+                            console.log(data.suggested_tokens.length);
+                            return process(data.suggested_tokens);
+                        });
+                    },
+                    
+                    menu: '<ul class="typeahead dropdown-menu" role="listbox" style="width: 410px"></ul>',
+                    item: '<li><a class="dropdown-item" href="#" role="option" style="width: 410px"></a></li>',
+                    items : 10,
+                    minLength: 3   
+            });
+        });
+    </script>
+
+</body>
+
+</html>

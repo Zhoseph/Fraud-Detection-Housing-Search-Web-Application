@@ -1,0 +1,238 @@
+<%- include('partials/header') %>
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Listing Detail</title>
+    
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {   
+            $scope.test = "test OK";      
+            
+        });     
+
+            // $scope.get_tweet = function(a){
+            //     alert(a.tweets);
+            //     $scope.tweet_info =a.tweets;
+            // }
+
+    </script>
+
+  </head>
+  <body>    
+    <div class="site-branding-area" style="height: 110px; background-color: #1bd172">
+    <!-- #232f3f (navy blue) #1bd172(perfect green) #5a88ca(blue)-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <h1><a href="/"><img src="https://s3-us-west-2.amazonaws.com/cmpe295housing/logo-fly1.png" style="width:19%;height:19%;"></a></h1>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6">
+                    <div class="shopping-item">
+                        <a href="/post"><span class="cart-amunt" style="color: white">Post Listing</span> <i class="fa fa-star"></i><!--  <span class="product-count"></span> --></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End site branding area -->
+    
+    <div class="mainmenu-area">
+        <div class="container"  style="height: 50px">
+            <div class="row" style="height: 50px">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> 
+                <div class="navbar-collapse collapse" style="text-align:center">
+                    <ul class="nav navbar-nav" style="text-align:center">
+                        <li style="text-align:center"><a href=""><%= JSON.parse(created).title%></a></li>
+                        
+                    </ul>
+                </div>  
+            </div>
+        </div>
+    </div> <!-- End mainmenu area -->
+    
+    <div class="slider-area" style="margin-top: 20px;">
+            <!-- Slider -->
+            <div class="block-slider block-slider3" style="">
+                <ul class="" id="bxslider-home4" style="">
+
+                <% 
+                var cre = JSON.parse(created); 
+                for(var i in cre.image) 
+                {     
+                %>
+                   <!-- <li> -->
+                   <div class="container">
+                        <div align="center" style="width: 65%; height: 310px; float: left; margin: 0 auto">
+                            <img src=<%= cre.image[i]%> style="height: 310px; width: auto;" alt="Slide">
+                        </div>
+                        <div style="width: 35%; height: 310px; float: left;  display: flex; justify-content: center; align-items: center;  overflow: auto; word-wrap: break-word;">
+                        <div class="" style="text-align: center; word-wrap: break-word;  overflow: auto;">
+                            <h2 class="caption title">
+                                <%= cre.bedroom%>Bedroom <span class="primary" style="color: #3cbe3c"> <%= cre.type.toUpperCase()%><strong> <%= cre.title%></strong></span>
+                            </h2>
+                            <h4 class="caption subtitle">Rent: $<%= cre.price%></h4>
+                            <a class="caption button-radius" href=<%= '/fraudreport/' + cre._id %>><span class="icon"></span>Fraud Report</a>
+                        </div>
+                        </div>
+                    </div>
+                   <!--  </li> -->
+                <% 
+                }  
+                %>
+
+                </ul>
+            </div>
+            <!-- ./Slider -->
+    </div> <!-- End slider area -->    
+    
+    <div class="maincontent-area">
+        <div class="zigzag-bottom"></div>
+        <div class="container">
+
+
+        <div class="tabbable"> <!-- Only required for left/right tabs -->
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1" data-toggle="tab">Location</a></li>
+            <li><a href="#tab2" data-toggle="tab">Description</a></li>
+            <li><a href="#tab3" data-toggle="tab">Others</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane active" id="tab1">
+                <div id="map" style="width:100%;height:400px;background:yellow"></div> 
+              
+            </div>
+            <div class="tab-pane" id="tab2">
+              <p><h4 class=""><%= cre.description%></h4></p>
+            </div>
+            <div class="tab-pane" id="tab3"> <!-- working -->
+              <p><h4 class="">Address : <%= cre.address.street + ',' + cre.address.city + ',' + cre.address.state %></h4></p>
+              <p><h4 class="">Available On : <%= cre.availableOn.substring(0,10) %></h4></p>
+              <p><h4 class="">Laundry : <%= cre.laundry %></h4></p>
+              <p><h4 class="">Parking : <%= cre.parking %></h4></p>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var map;
+          // var location = {lat: -34.397, lng: 150.644};
+          var list = <%- created %>;
+          var lat = list.address.lat, lng= list.address.lon;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: lat, lng: lng},
+              zoom: 10
+            });
+            var marker = new google.maps.Marker({
+              position: {lat: lat, lng: lng},
+              map: map,
+              title: 'Hello World!'
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDE3Kp25MA7U-qEc7qwwt7RU4D2PYMHMfM&callback=initMap" async defer></script>
+        <hr>
+
+
+        <!-- recommendation  -->
+        <% var rec = JSON.parse(recommend); %>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="latest-product">
+                        <h2 class="section-title">Recommendation</h2> 
+                        <div class="product-carousel">  
+
+                        <% 
+                            for(var i in rec.recommend) 
+                            {    
+                                if(i<6){
+                        %>
+                        <!-- <single recommendation -->
+                        <div class="single-product">
+                            <div class="product-f-image">
+                                <img src=<%= rec.recommend[i].image[0]%> style="height: 261px; width: auto;" alt="">
+                                <div class="product-hover">
+                                    <a href=<%= '/detail/show/' + rec.recommend[i]._id; %> class="view-details-link"><i class="fa fa-link"></i> See details</a> 
+                                </div>
+                            </div>
+                            
+                            <h2><%= rec.recommend[i].address.city==undefined?'1':rec.recommend[i].address.city %></h2>
+                            
+                            <div class="product-carousel-price">
+                                <ins>$<%= rec.recommend[i].price%></ins>
+                            </div> 
+                        </div>
+
+                        <% 
+                            }
+                        }  
+                        %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End recommendation  -->
+
+        </div>
+    </div> <!-- End main content area -->
+   
+    <!-- Latest jQuery form server -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    
+    <!-- Bootstrap JS form CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    
+    <!-- jQuery sticky menu -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    
+    <!-- jQuery easing -->
+    <script src="js/jquery.easing.1.3.min.js"></script>
+    
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    
+    <!-- Slider -->
+    <script type="text/javascript" src="js/bxslider.min.js"></script>
+	<script type="text/javascript" src="js/script.slider.js"></script>
+  </body>
+</html>
+<%- include('partials/footer') %>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request Fraud Report</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <style type="text/css">
+    .container {
+      padding: 40px;
+    }
+  </style>
+</head>
+<body background="https://s-media-cache-ak0.pinimg.com/originals/e7/bf/fd/e7bffd674918bc4b8f65fb2ce43fd81b.jpg">
+
+<div class = "container" ng-app="myApp" ng-controller="myCtrl">
+  <div class='row'>
+    <div class='col-md-12' style = "text-align: center;">
+      <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+      <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+      <h1 style = "color:royalblue">Fraud Detection Service</h1>
+      <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+      <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+      <p class='lead' style = "color:white;font-size:15px">Input a suspicious lising url from Trullia, Craigslist, Hotpods or Apartments.com and your email address to request a Fraud Assessment Report</p>
+    </div>
+  </div>
+  <div class='row' >
+    <div class="col-md-12" style="font-size:18;color:white;margin: 25px; margin-left: 0px">
+      Listing URL:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input  style="color:grey;display: inline-block;
+            width: 83%;
+            border-radius: 3px;
+            padding: 4px 55px 4px 15px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;" type = "text" name ="myurl" placeholder="Ex. https://www.trulia.com/rental/4023345064-426-W-Oak-St-Oakland-City-IN-47660" ng-change = "func1()" ng-model = "listingurl" required/>
+    </div>
+  </div>
+  <div class='row' >
+    <div class="col-md-12" style="font-size:18;color:white;margin: 25px;text-align: center">
+      <label  ng-show="urlVali" style="color:red;text-align: center">Please input a valid url.</label>
+    </div>
+  </div>
+  <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+
+  <div class='row' >
+    <div class="col-md-12" style="font-size:18;color:white;margin: 25px; margin-left: 0px">
+      Email Address:
+      <input style="color:grey;display: inline-block;
+            width: 83%;
+            border-radius: 3px;
+            padding: 4px 55px 4px 15px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;"  type = "email" name="myemail" placeholder="Ex. Micheal@gmail.com" ng-model = "email" ng-change = "func2()" required/>
+    </div>
+  </div>
+  <div class='row' >
+    <div class="col-md-12" style="font-size:18;color:white;margin: 25px;text-align: center">
+      <label  ng-show="emailVali" style="color:red;text-align: center">Please input a valid email address.</label>
+    </div>
+  </div>
+  <div class='row'><div class='col-md-12'>&nbsp;&nbsp;&nbsp;</div></div>
+  <div class='row'>
+    <div class="col-md-5"></div>
+    <div class="col-md-4">
+      <button class = "btn btn-primary btn-lg" style = "align-items: center;align-content: center" ng-click = "sendlinkfunc()" >Request a Report</button>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $http) {
+        $scope.urlVali= false;
+        $scope.emailVali= false;
+
+        $scope.sendlinkfunc = function(){
+            var lurl = $scope.listingurl;
+            var uemail = $scope.email;
+            var myurl = "Url" + lurl +"&email_address=" + uemail;
+
+            if(validate_url(lurl)==false){
+                $scope.urlVali= true;
+            }else{
+                $scope.urlVali= false;
+            }
+            if(validate_email(uemail)==false){
+                $scope.emailVali= true;
+            }else{
+                $scope.emailVali= false;
+            }
+
+            if(!$scope.urlVali && !$scope.emailVali){
+                $http({
+                    method : "POST",
+                    url : myurl}).then(function mySuccess(response) {
+                        if(response.data.status =="ok"){
+                            alert(" Your Request for Fraud Detection Report Is Accepted. ");
+                        }
+                }, function myError(response) {
+                    $scope.email = response.status;
+                });
+            }
+            $scope.func1= function(){
+                console.log("executed func1");
+                if(validate_url(lurl)==false){
+                    $scope.urlVali= true;
+                }else{
+                    $scope.urlVali= false;
+                }
+            }
+            $scope.func2= function(){
+                console.log("executed func2");
+                if(validate_email(uemail)==false){
+                    $scope.emailVali= true;
+                }else{
+                    $scope.emailVali= false;
+                }
+            }
+        }
+    });
+    function validate_url(url){
+        console.log("executed vali url");
+        if(url == null){
+            return false;
+        }
+        var http = url.indexOf("http://");
+        var https = url.indexOf("https://");
+        var www = url.indexOf("www.");
+        if(http==0 || https==0 || www==0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    function validate_email(email){
+        console.log("executed vali email");
+        if(email == null){
+            return false;
+        }
+        var pos = email.indexOf("@");
+        if(pos > 0 && pos < email.length-4 ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+</script>
+
+</body>
+</html>
